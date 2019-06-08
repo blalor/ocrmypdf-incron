@@ -1,0 +1,1 @@
+/srv/incoming IN_CLOSE_WRITE /process.sh $@ $#

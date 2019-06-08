@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+   ocr:
+        build:
+            context: https://github.com/blalor/ocrmypdf-incron.git
+            
+        # init: true ## not supported in docker 17.09, so we use tini
+        
+        volumes:
+            - /share/Scans/Incoming:/srv/incoming
+            - /share/Scans/OCRed:/srv/ocr
+        
+        restart: always
